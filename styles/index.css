@@ -1,0 +1,134 @@
+/* i want boxes with borders yo! */
+body {
+    box-sizing: border-box;
+}
+/* 
+The main container of the Card element! 
+margin-bottom to add margin to the .circle block.
+making sure things stays centered!
+*/
+.square {
+    height: 100vh;
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+/* 
+The information container to keep the cards as i want them!
+making sure the full width and height is used for the container.
+added padding to give the card class 20px margin from the edge of this container
+used wrap to make sure they switch row when filling the container.
+justify-content to keep them separated.
+*/
+.square__container {
+    background-color: green;
+    /* bugcheck ^ */
+    width: 100%;
+    max-width: 956px;
+    height: 100%;
+    max-height: 520px;
+    border: none; 
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 
+Card design!
+same as above with width and height.
+also added bottom margin of 20px for them to spread out evenly across the square__container
+*/
+.card {
+    background-color: aqua;
+    /* bugcheck ^ */
+    display: flex;
+    width: 100%;
+    max-width: 468px;
+    height: 100%;
+    max-height: 160px;
+    margin-bottom: 20px;
+}
+/* the first card containers items! */
+.card__one {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-end;
+    /* My margin left and bottom shows 19px, not sure this is properly aligned but i do what my figma shows :) */
+    margin-left: 19px; 
+    margin-bottom: 19px;    
+}
+.card__onebox {
+    background-color: blueviolet;
+    display: flex;
+    width: 100%;
+    max-width: 78px;
+    height: 100%;
+    max-height: 78px;
+    border: none; 
+    margin-right: 20px;
+}
+
+.card__two {
+    background-color: blueviolet;
+    display: flex;
+    width: 100%;
+    max-width: 78px;
+    height: 100%;
+    max-height: 78px;
+    border: none; 
+}
+.card__three {
+    background-color: blueviolet;
+    display: flex;
+    width: 100%;
+    max-width: 78px;
+    height: 100%;
+    max-height: 78px;
+    border: none; 
+}
+.card__four {
+    background-color: blueviolet;
+    display: flex;
+    width: 100%;
+    max-width: 78px;
+    height: 100%;
+    max-height: 78px;
+    border: none; 
+}
+.card__five {
+    background-color: blueviolet;
+    display: flex;
+    width: 100%;
+    max-width: 78px;
+    height: 100%;
+    max-height: 78px;
+    border: none; 
+}
+.card__six {
+    background-color: blueviolet;
+    display: flex;
+    width: 100%;
+    max-width: 78px;
+    height: 100%;
+    max-height: 78px;
+    border: none; 
+}
+
+
+
+
+
+/* START WITH CIRCLE PLZ! */
+.circle {
+    height: 100vh;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
