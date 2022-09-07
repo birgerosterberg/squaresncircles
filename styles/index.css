@@ -1,7 +1,3 @@
-/* i want boxes with borders yo! */
-body {
-    box-sizing: border-box;
-}
 /* 
 The main container of the Card element! 
 margin-bottom to add margin to the .circle block.
@@ -9,7 +5,7 @@ making sure things stays centered!
 */
 .square {
     height: 100vh;
-    background-color: green;
+    background-color: #718355;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -24,11 +20,13 @@ used wrap to make sure they switch row when filling the container.
 justify-content to keep them separated.
 */
 .square__container {
-    background-color: green;
+    /* background-color: #97a97c; */
     /* bugcheck ^ */
     width: 100%;
     max-width: 956px;
+    min-width: 0;
     height: 100%;
+    min-height: 0;
     max-height: 520px;
     border: none; 
     padding: 20px;
@@ -43,8 +41,9 @@ same as above with width and height.
 also added bottom margin of 20px for them to spread out evenly across the square__container
 */
 .card {
-    background-color: aqua;
+    background-color: #b5c99a;
     /* bugcheck ^ */
+    border-radius: 8px;
     display: flex;
     width: 100%;
     max-width: 468px;
@@ -52,18 +51,19 @@ also added bottom margin of 20px for them to spread out evenly across the square
     max-height: 160px;
     margin-bottom: 20px;
 }
-/* the first card containers items! */
+/* the first card containers items! Here lies the magic that tells the boxes where to go!*/
 .card__one {
     display: flex;
     width: 100%;
-    flex-direction: row;
     align-items: flex-end;
     /* My margin left and bottom shows 19px, not sure this is properly aligned but i do what my figma shows :) */
     margin-left: 19px; 
     margin-bottom: 19px;    
 }
+/* This is the boxes inside of card one! */
 .card__onebox {
-    background-color: blueviolet;
+    background-color: #97a97c;
+    border-radius: 4px;
     display: flex;
     width: 100%;
     max-width: 78px;
@@ -72,45 +72,139 @@ also added bottom margin of 20px for them to spread out evenly across the square
     border: none; 
     margin-right: 20px;
 }
-
+/* My 2nd Card box */
 .card__two {
-    background-color: blueviolet;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+/* This is the boxes inside of card two */
+.card__twobox {
+    background-color: #97a97c;
+    border-radius: 4px;
     display: flex;
     width: 100%;
     max-width: 78px;
     height: 100%;
-    max-height: 78px;
-    border: none; 
+    max-height: 120px;
+    margin: 10px;
+    border: none;
 }
+/* My 3rd card box */
 .card__three {
-    background-color: blueviolet;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+/* This is the boxes inside of card three */
+.card__threebox {
+    background-color: #97a97c;
+    border-radius: 4px;
     display: flex;
     width: 100%;
     max-width: 78px;
     height: 100%;
     max-height: 78px;
+    margin-right: 20px;
     border: none; 
 }
+/* Card 4 box!! */
 .card__four {
-    background-color: blueviolet;
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* My margin left and bottom shows 19px, not sure this is properly aligned but i do what my figma shows :) */
+    margin-left: 20px; 
+    margin-top: 20px;    
+}
+/* Boxes inside of card4 had to do some extra and realized this might have been a very very slow way of doing this design :D */
+.card__fourbox {
+    background-color: #97a97c;
+    border-radius: 4px;
     display: flex;
     width: 100%;
     max-width: 78px;
     height: 100%;
     max-height: 78px;
     border: none; 
+    margin-right: 20px;
+    /* This is the third box in card four, had to give it another mission in life! */
 }
+.card--fourboxthree {
+    align-self: flex-end;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+/* Card 5! My god ive made to many boxes and classes, i bet there is a better way, but lets finish, do not let my mind get melted, finish the thought and learn after!!!! */
 .card__five {
-    background-color: blueviolet;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    /* identical to box height */
+    color: #FFFFFF;
     display: flex;
     width: 100%;
-    max-width: 78px;
     height: 100%;
-    max-height: 78px;
-    border: none; 
+    margin-left: 20px;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
 }
+/* Downward follows the three boxes from Card Five ... MY god this is painful :D The text alignment and box alignment is so random i hope this is ok, but i see text aint where it should in box 2 :( */
+.card__fiveboxfirst {
+    background-color: #97a97c;
+    border-radius: 4px;
+    display: flex;
+    width: 78px;
+    height: 120px;
+    border: none; 
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+.card__fiveboxsecond {
+    background-color: #97a97c;
+    border-radius: 4px;
+    display: flex;
+    width: 78px;
+    height: 64px;
+    border: none; 
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.card__fiveboxthird {
+    background-color: #97a97c;
+    border-radius: 4px;
+    display: flex;
+    width: 78px;
+    height: 120px;
+    border: none; 
+    align-items: center;
+    justify-content: center;
+    margin-right:20px ;
+}
+/* Card 6!  */
 .card__six {
-    background-color: blueviolet;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+/* One day i will figure this out the proper way, but until then i let this be finished?! */
+.card__sixbox {
+    background-color: #97a97c;
+    border-radius: 4px;
     display: flex;
     width: 100%;
     max-width: 78px;
@@ -118,6 +212,19 @@ also added bottom margin of 20px for them to spread out evenly across the square
     max-height: 78px;
     border: none; 
 }
+.card__sixboxsecond {
+    background-color: #97a97c;
+    border-radius: 4px;
+    display: flex;
+    width: 100%;
+    max-width: 156px;
+    height: 100%;
+    max-height: 78px;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 
 
 
@@ -131,4 +238,5 @@ also added bottom margin of 20px for them to spread out evenly across the square
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
