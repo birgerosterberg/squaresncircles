@@ -11,12 +11,12 @@ making sure things stays centered!
 */
 .square {
     height: 100vh;
+    margin-bottom: 20px;
     background-color: #718355;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
 }
 /* 
 The information container to keep the cards as i want them!
@@ -34,8 +34,8 @@ justify-content to keep them separated.
     height: 100%;
     min-height: 0;
     max-height: 520px;
-    border: none; 
     padding: 20px;
+    border: none; 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -61,12 +61,12 @@ also added bottom margin of 20px for them to spread out evenly across the square
 }
 /* the first card containers items! Here lies the magic that tells the boxes where to go!*/
 .card__one {
-    display: flex;
-    align-items: flex-end;
     width: 100%;
     /* My margin left and bottom shows 19px, not sure this is properly aligned but i do what my figma shows :) */
     margin-left: 19px; 
     margin-bottom: 19px;    
+    display: flex;
+    align-items: flex-end;
 }
 /* This is the boxes inside of card one! */
 .card__onebox {
@@ -92,13 +92,13 @@ also added bottom margin of 20px for them to spread out evenly across the square
 .card__twobox {
     background-color: #97a97c;
     border-radius: 4px;
-    display: flex;
     width: 100%;
     max-width: 78px;
     height: 100%;
     max-height: 120px;
     margin: 10px;
     border: none;
+    display: flex;
 }
 /* My 3rd card box */
 .card__three {
@@ -122,24 +122,24 @@ also added bottom margin of 20px for them to spread out evenly across the square
 }
 /* Card 4 box!! */
 .card__four {
-    display: flex;
     width: 100%;
+    margin-left: 20px; 
+    margin-top: 20px;  
+    display: flex;  
     align-items: flex-start;
     justify-content: space-between;
-    margin-left: 20px; 
-    margin-top: 20px;    
 }
 /* Boxes inside of card4 had to do some extra and realized this might have been a very very slow way of doing this design :D */
 .card__fourbox {
     background-color: #97a97c;
     border-radius: 4px;
-    display: flex;
     width: 100%;
     max-width: 78px;
     height: 100%;
     max-height: 78px;
     border: none; 
     margin-right: 20px;
+    display: flex;
     /* This is the third box in card four, had to give it another mission in life! */
 }
 .card--fourboxthree {
@@ -161,10 +161,10 @@ also added bottom margin of 20px for them to spread out evenly across the square
     width: 100%;
     height: 100%;
     margin-left: 20px;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border: none;
 }
 /* Downward follows the three boxes from Card Five ... MY god this is painful :D The text alignment and box alignment is so random i hope this is ok, but i see text aint where it should in box 2 :( */
 .card__fiveboxfirst {
@@ -181,11 +181,11 @@ also added bottom margin of 20px for them to spread out evenly across the square
 .card__fiveboxsecond {
     background-color: #97a97c;
     border-radius: 4px;
-    display: flex;
     width: 78px;
     height: 64px;
     margin-bottom: 10px;
     border: none; 
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -226,9 +226,9 @@ also added bottom margin of 20px for them to spread out evenly across the square
     max-width: 156px;
     height: 100%;
     max-height: 78px;
-    border: none;
     margin-left: 20px;
     margin-right: 20px;
+    border: none;
     display: flex;
 }
 
@@ -281,12 +281,12 @@ also added bottom margin of 20px for them to spread out evenly across the square
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
+    order: 1;
     background-color: black;
     height: 200px;
     width: 253px;
     margin-right: 20px;
     padding: 10px;
-    order: 1;
 }
 .cbox2 {
     display: flex;
@@ -295,48 +295,48 @@ also added bottom margin of 20px for them to spread out evenly across the square
     justify-content: flex-end;
     align-items: flex-end;
     align-content: flex-start;
+    order: 3;
     background-color: black;
     height: 200px;
     width: 253px;
     margin-right: 20px;
     padding: 10px;
-    order: 3;
 }
 .cbox3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
+    order: 5;
     background-color: black;
     height: 200px;
     width: 253px;
     margin-right: 20px;
     padding: 10px;
-    order: 5;
 }
 .cbox4 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: space-around;
+    order: 2;
     background-color: black;
     height: 200px;
     width: 253px;
     margin-right: 20px;
     padding: 10px;
-    order: 2;
 }
 .cbox5 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    order: 4;
     background-color: black;
     height: 200px;
     width: 253px;
     margin-right: 20px;
     padding: 10px;
-    order: 4;
 }
 /* Gave the Circle a smaller radius and added padding and margin to make sure they had the right distance from eachother and the edge of the boxes. */
 .circle{
